@@ -13,16 +13,16 @@ Super Resolution(SR)은 저해상도 이미지를 입력으로 받아
 <img src="images/new_example.png" width="600"/>
 
 ### 프로젝트 목표
-고영테크놀러지의 반도체 검사 장비는 
-정확한 위치 제어 및 Motion 이동을 위해 Machine Calibration(Mcal) 이미지를 활용한다. 
+고영테크놀러지의 반도체 검사 장비는   
+정확한 위치 제어 및 Motion 이동을 위해 Machine Calibration(Mcal) 이미지를 활용한다.   
 
-기존 Calibration 이미지 생성 방식은 
-고해상도 이미지를 직접 측정해야 하므로 생성 시간이 오래 걸리고, 
-이로 인해 장비 운영 효율 및 생산성이 저하되는 문제가 있었다. 
+기존 Calibration 이미지 생성 방식은   
+고해상도 이미지를 직접 측정해야 하므로 생성 시간이 오래 걸리고,   
+이로 인해 장비 운영 효율 및 생산성이 저하되는 문제가 있었다.   
  
-본 프로젝트에서는 저해상도(LR) Calibration 데이터를 기반으로 
-고해상도(HR) 이미지를 복원하는 딥러닝 기반 Super-Resolution 모델을 개발하여, 
-Calibration 이미지 생성 시간 단축, 장비 Calibration 정확도 향상, 생산 효율 및 장비 운영 효율 개선을 목표로 하였다. 
+본 프로젝트에서는 저해상도(LR) Calibration 데이터를 기반으로   
+고해상도(HR) 이미지를 복원하는 딥러닝 기반 Super-Resolution 모델을 개발하여,   
+Calibration 이미지 생성 시간 단축, 장비 Calibration 정확도 향상, 생산 효율 및 장비 운영 효율 개선을 목표로 하였다.   
 
 
 ### 기술 선정 배경
