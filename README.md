@@ -39,7 +39,7 @@ Calibration 이미지 생성 시간 단축, 장비 Calibration 정확도 향상,
 ### Super Resolution 개요
 Super Resolution(SR)은 저해상도 이미지를 입력으로 받아  
 고해상도 이미지를 복원하는 이미지 복원(Image Restoration) 기술이다.
-<img src="images/new_example.png" width="450"/>
+<img src="images/new_example.png" width="550"/>
 
 
 ---
