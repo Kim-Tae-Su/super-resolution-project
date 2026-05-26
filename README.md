@@ -13,11 +13,33 @@ Super Resolution(SR)은 저해상도 이미지를 입력으로 받아
 <img src="images/new_example.png" width="600"/>
 
 ### 프로젝트 목표
-고영테크놀러지 반도체 검사 장비는 정확한 위치로 모션 이동을 위해 Machine Calibration(Mcal) 이미지 파일을 측정하여 활용하고 있다.  
-그러나 기존 이미지 파일 측정 및 생성 시간이 오래 걸려 생산 효율성을 저하시키는 문제가 있다.
+고영테크놀러지의 반도체 검사 장비는
+정확한 위치 제어 및 Motion 이동을 위해 Machine Calibration(Mcal) 이미지를 활용한다.
 
-본 프로젝트에서는 저해상도(LR) Calibration 데이터를 고해상도(HR)로 복원하는 딥러닝 기반 Super-Resolution(SR) 모델을 개발하여  
-Calibration 이미지 생성 시간을 단축하고 장비 보정 정확도를 향상시키는 것을 목표로 한다.
+기존 Calibration 이미지 생성 방식은
+고해상도 이미지를 직접 측정해야 하므로 생성 시간이 오래 걸리고,
+이로 인해 장비 운영 효율 및 생산성이 저하되는 문제가 있었다.
+
+본 프로젝트에서는 저해상도(LR) Calibration 데이터를 기반으로
+고해상도(HR) 이미지를 복원하는 딥러닝 기반 Super-Resolution 모델을 개발하여,
+Calibration 이미지 생성 시간 단축, 장비 Calibration 정확도 향상, 생산 효율 및 장비 운영 효율 개선을 목표로 하였다.
+
+
+### 기술 선정 배경
+반도체 검사 장비 특성상 미세한 패턴과 Edge 정보를 정밀하게 복원해야 하므로,
+단순 Interpolation(Bicubic 등) 기반 이미지 확대 방식만으로는
+필요한 수준의 정확도를 확보하기 어려웠다.
+
+이에 따라 저해상도 이미지로부터 고주파 특징(High-Frequency Feature)과
+세부 패턴을 효과적으로 복원할 수 있는
+딥러닝 기반 Super-Resolution 기술을 도입하였다.
+
+다만 딥러닝 기반 SR 모델은 복원 품질이 향상되는 대신
+모델 복잡도 증가에 따른 추론 속도(Inference Time) 및 연산 비용 증가라는 Trade-off가 존재하였다.
+
+정확도 향상뿐 아니라 실시간 처리 성능과 장비 운영 효율도 중요했기 때문에,
+복원 품질(PSNR, SSIM)과 추론 속도(Inference Time) 간 균형을 고려하여 모델을 최적화하였다.
+
 
 ---
 
