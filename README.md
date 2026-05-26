@@ -7,10 +7,6 @@
 - 프로젝트 기간: 2024.09 ~ 2025.01
 - 프로젝트 인원: 2명
 
-### Super Resolution 개요
-Super Resolution(SR)은 저해상도 이미지를 입력으로 받아  
-고해상도 이미지를 복원하는 이미지 복원(Image Restoration) 기술이다.
-<img src="images/new_example.png" width="600"/>
 
 ### 프로젝트 목표
 고영테크놀러지의 반도체 검사 장비는   
@@ -38,7 +34,12 @@ Calibration 이미지 생성 시간 단축, 장비 Calibration 정확도 향상,
 모델 복잡도 증가에 따른 추론 속도(Inference Time) 및 연산 비용 증가라는 Trade-off가 존재하였다.   
 
 정확도 향상뿐 아니라 실시간 처리 성능과 장비 운영 효율도 중요했기 때문에,     
-복원 품질(PSNR, SSIM)과 추론 속도(Inference Time) 간 균형을 고려하여 모델을 최적화하였다.   
+복원 품질(PSNR, SSIM)과 추론 속도(Inference Time) 간 균형을 고려하여 모델을 최적화하였다. 
+
+### Super Resolution 개요
+Super Resolution(SR)은 저해상도 이미지를 입력으로 받아  
+고해상도 이미지를 복원하는 이미지 복원(Image Restoration) 기술이다.
+<img src="images/new_example.png" width="450"/>
 
 
 ---
