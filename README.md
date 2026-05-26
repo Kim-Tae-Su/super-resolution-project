@@ -44,7 +44,13 @@ Super Resolution(SR)은 저해상도 이미지를 입력으로 받아
 
 ---
 
-## 2. 담당 역할
+## 2. 시스템 파이프라인
+<img src="images/pipeline.png" width="800"/>
+
+---
+
+
+## 3. 담당 역할
 ### 데이터 로딩
 - 데이터 수집
 - 자사CRM 크롤링 스크립트 작성 
@@ -73,12 +79,10 @@ Super Resolution(SR)은 저해상도 이미지를 입력으로 받아
 - 복원된 HR 이미지와 실제 장비 오차 이미지 비교 분석
 - 실제 장비 적용 가능성 검증
   
-### 파이프라인
-<img src="images/pipeline.png" width="800"/>
 
 ---
 
-## 3. 기술적 문제
+## 4. 기술적 문제
 
 ### 문제 원인
 Calibration 이미지는 일반적인 RGB 이미지와 달리,  
@@ -107,11 +111,11 @@ X_restore = X_pred * (X_max - X_min) + X_min
 
 ---
 
-## 4. 결과 및 성과
+## 5. 결과 및 성과
 
 - Mcal 오차 이미지 파일 생성 시간 약 90% 단축
 - 고정밀 장비 보정 정확도 향상
-- 총 5종의 Super-Resolution 모델 설계 및 시뮬레이션 수행
+- 총 5종의 Super-Resolution 모델(SRCNN, VDSR, DRCN, DRRN, SRResNet) 설계 및 시뮬레이션 수행
 - 최적 SR 모델 선별
 - SR 기술 기반 실시간 보정 시스템 초기 기반 구축
 - 기술 제안 → 설계 → 구현 → 적용까지 End-to-End 프로세스 수행
@@ -130,7 +134,7 @@ X_restore = X_pred * (X_max - X_min) + X_min
 - SR 적용 후 Error Vector 분포가 감소하여 장비 보정 정확도 향상을 확인함
 ---
 
-## 5. 사용 기술
+## 6. 사용 기술
 
 - Language
   - Python
@@ -143,7 +147,7 @@ X_restore = X_pred * (X_max - X_min) + X_min
 
 ---
 
-## 6. 프로젝트 의의  
+## 7. 프로젝트 의의  
 본 프로젝트는 단순한 Super-Resolution 모델 구현에 그치지 않고,    
 실제 반도체 검사 장비 환경의 데이터 특성과 물리적 해석 가능성을 고려하여   
 실무 환경에 적용 가능한 딥러닝 기반 Calibration 시스템을 구축한 프로젝트이다.   
